@@ -10,5 +10,5 @@
 ```bash
 kubectl apply -f deploy/
 ```
-#nodePort приложения 30001
-#пшеnodePort traefik loadbalancer http 30800
+### nodePort приложения 30001
+### nodePort traefik loadbalancer http 30800
