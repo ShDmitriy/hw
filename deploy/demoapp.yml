@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demoapp
+  name: demoapp-v1
   labels:
     app: demoapp
 spec:
-  replicas: 1
+  replicas: 3
   strategy: {}
   selector:
     matchLabels:
       app: demoapp
+      version: v1
   template:
     metadata:
       labels:
         app: demoapp
+        version: v1
     spec:
       containers:
       - name: demoapp
@@ -42,6 +44,7 @@ spec:
   type: NodePort
   selector:
     app: demoapp
+    version: v1
   ports:
   - port: 80
     targetPort: 3000

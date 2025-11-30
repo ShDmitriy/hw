@@ -11,4 +11,4 @@
 kubectl apply -f deploy/
 ```
 ### nodePort приложения 30001
-### nodePort traefik loadbalancer http 30800
+### nodePort traefik ingress 30800

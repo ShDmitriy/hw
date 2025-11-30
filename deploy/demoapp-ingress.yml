@@ -6,9 +6,10 @@ metadata:
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
+  ingressClassName: traefik
   rules:
-  # - host: demoapp.local #потребует правки /etc/hosts
-  - http:
+  - host: example.com 
+    http:
       paths:
       - path: /
         pathType: Prefix
