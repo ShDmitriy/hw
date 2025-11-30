@@ -36,16 +36,16 @@ spec:
               - mongosh
               - --eval
               - "db.adminCommand('ping')"
-          initialDelaySeconds: 30
+          initialDelaySeconds: 5
           periodSeconds: 10
           timeoutSeconds: 5
           successThreshold: 1
           failureThreshold: 6
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
-          value: admin
+          value: "admin"
         - name: MONGO_INITDB_ROOT_PASSWORD
-          value: password
+          value: "password"
         volumeMounts:
         - mountPath: /data/db
           name: mongodb-data
